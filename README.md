@@ -6,4 +6,4 @@ Projects along with their commits can be found below.
 
 ## Projects
 
-- [Project 1](.spec/project-1.md) - [Commit](tree/3a08f0003601fe07ff395ae3fd438426bd61a9d1)
+- [Project 1](.spec/project-1.md) - [Commit](../../tree/3a08f0003601fe07ff395ae3fd438426bd61a9d1)
