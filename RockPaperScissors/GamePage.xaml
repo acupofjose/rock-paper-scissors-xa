@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:RPS="clr-namespace:RockPaperScissors"
+             x:Class="RockPaperScissors.GamePage">
+    <ContentPage.Content>
+        <StackLayout x:Name="RootLayout" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+            <Label x:Name="DescriptionLabel" Text="Choose your Weapon." FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0, 0, 0, 25"></Label>
+            <Grid x:Name="ButtonLayout" HorizontalOptions="CenterAndExpand" Margin="10, 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <RPS:StyledGameButton x:Name="RockButton" Grid.Row="0" Grid.Column="0" Text="Rock"></RPS:StyledGameButton>
+                <RPS:StyledGameButton x:Name="PaperButton" Grid.Row="0" Grid.Column="1" Text="Paper"></RPS:StyledGameButton>
+                <RPS:StyledGameButton x:Name="ScissorsButton" Grid.Row="0" Grid.Column="2" Text="Scissors"></RPS:StyledGameButton>
+            </Grid>
+            <Button x:Name="ShootButton" Text="Shoot" HorizontalOptions="FillAndExpand" Margin="15" BorderWidth="1" BorderColor="SlateGray" BackgroundColor="DimGray" TextColor="White"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace rps
+namespace RockPaperScissors
 {
     // This is a helper class to keep from repeating yourself (aka, being DRY - "Don't Repeat Yourself")
     // It will function just as a regular button does, it just adds uniform styling to the button

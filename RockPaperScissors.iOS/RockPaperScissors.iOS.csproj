@@ -147,13 +147,13 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
+    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991477" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\rps\rps.csproj">
-      <Project>{28B97AA0-C8D5-41A9-AC78-092DBD2F921F}</Project>
-      <Name>rps</Name>
+    <ProjectReference Include="..\RockPaperScissors\RockPaperScissors.csproj">
+      <Project>{E6E5A370-F3A6-464D-95FA-EE0B0AF70ACD}</Project>
+      <Name>RockPaperScissors</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

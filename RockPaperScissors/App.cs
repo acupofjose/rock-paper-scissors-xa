@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace rps
+namespace RockPaperScissors
 {
     // This class is where the magic happens. Xamarin expects there to be a class that is
     // of type `Application` (subclasses) and this class will determine the actions that
@@ -11,8 +11,12 @@ namespace rps
         public App()
         {
             // This is really all we need right now. Tell the app to serve the 
-            // Content we've generated. 
-            MainPage = new NavigationPage(new MainPage());
+            // Content we've generated.
+            var rootPage = new TabbedPage();
+            rootPage.Children.Add(new GamePage());
+            rootPage.Children.Add(new GamePageInCSharp());
+
+            MainPage = new NavigationPage(rootPage);
         }
 
         protected override void OnResume()

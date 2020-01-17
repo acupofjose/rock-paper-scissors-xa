@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace rps.iOS
+namespace RockPaperScissors.iOS
 {
     public class Application
     {

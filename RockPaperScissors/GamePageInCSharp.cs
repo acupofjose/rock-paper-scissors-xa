@@ -2,9 +2,9 @@
 using System.Threading;
 using Xamarin.Forms;
 
-namespace rps
+namespace RockPaperScissors
 {
-    public class MainPage : ContentPage
+    public class GamePageInCSharp : ContentPage
     {
         // Map strings to variables
         //  this is done so that if we wanted to change the names of each action we would only
@@ -26,10 +26,10 @@ namespace rps
         // Keep a reference to the Description Label
         Label descriptionLabel;
 
-        public MainPage()
+        public GamePageInCSharp()
         {
             // This tells the Navigation page (App.cs:15) what title to put in the navigation bar.
-            Title = "Rock Paper Scissors";
+            Title = "C# : RPS";
 
 
             // Create a layout that is the 'root' or 'parent' that can hold everything (as children)
