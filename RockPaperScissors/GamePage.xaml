@@ -1,4 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- These top `xmlns:*` declarations are important. These tell the XAML interpreter -->
+<!-- What markup is considered valid and where to find assciated classes. -->
+<!-- `xmlns:RPS` tells the interpreter to look for the namespace RockPaperScissors and access it by the name `RPS` -->
+<!-- `x:Class` tells the interpreter where the Codebehind is located -->
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
@@ -7,9 +12,16 @@
              xmlns:RPS="clr-namespace:RockPaperScissors"
              x:Class="RockPaperScissors.GamePage">
     <ContentPage.Content>
+        <!-- This is our StackLayout - it contains all of the items on the page. We want it to be centered both verically and horizontally.-->
+        <!-- Note that the `x:Name` attribute will allow you to access this element in the Codebehind (`GamePage.xaml.cs`) -->
         <StackLayout x:Name="RootLayout" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+            
+            <!-- The Description Label is here to give feedback to the user. -->
             <Label x:Name="DescriptionLabel" Text="Choose your Weapon." FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0, 0, 0, 25"></Label>
+            
+            <!-- We need to arrange the buttons evenly in a 1x3 grid. -->
             <Grid x:Name="ButtonLayout" HorizontalOptions="CenterAndExpand" Margin="10, 0">
+                <!-- Note that the `*` is a grid unit type that does proportional layouts -->
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
@@ -18,10 +30,14 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
+                
+                <!-- Now that the grid is declared, we place each button in its corresponding location. -->
+                <!-- We can access our Custom control here because of the `xmlns:RPS` declaration at the top.-->
                 <RPS:StyledGameButton x:Name="RockButton" Grid.Row="0" Grid.Column="0" Text="Rock"></RPS:StyledGameButton>
                 <RPS:StyledGameButton x:Name="PaperButton" Grid.Row="0" Grid.Column="1" Text="Paper"></RPS:StyledGameButton>
                 <RPS:StyledGameButton x:Name="ScissorsButton" Grid.Row="0" Grid.Column="2" Text="Scissors"></RPS:StyledGameButton>
             </Grid>
+
             <Button x:Name="ShootButton" Text="Shoot" HorizontalOptions="FillAndExpand" Margin="15" BorderWidth="1" BorderColor="SlateGray" BackgroundColor="DimGray" TextColor="White"></Button>
         </StackLayout>
     </ContentPage.Content>
